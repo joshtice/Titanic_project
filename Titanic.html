@@ -11789,7 +11789,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I loaded the data file, 'titanic-data.csv', into a data frame with Pandas. Then, I looked at the dimensions of the data frame, the names of the features, and the number of missing values. For the features that were numerical, I performed a summary.</p>
+<p>I loaded the data file, 'titanic-data.csv', into a data frame with Pandas. Then, I looked at the dimensions of the data frame, the names of the features, and the number of missing values. Finally, for the features that were numerical, I performed a summary.</p>
 
 </div>
 </div>
@@ -11801,9 +11801,8 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;titanic-data.csv&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s1">&#39;The data frame has {} rows (datapoints) and {} columns (features).&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Feature | Number of missing values&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{} | {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">())))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Feature</span><span class="se">\t\t</span><span class="s1">Number of missing values&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
 <span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
@@ -11818,19 +11817,20 @@ div#notebook {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>The data frame has 891 rows (datapoints) and 12 columns (features).
-Feature | Number of missing values
-PassengerId | 0
-Survived | 0
-Pclass | 0
-Name | 0
-Sex | 0
-Age | 177
-SibSp | 0
-Parch | 0
-Ticket | 0
-Fare | 0
-Cabin | 687
-Embarked | 2
+Feature		Number of missing values
+PassengerId      0
+Survived         0
+Pclass           0
+Name             0
+Sex              0
+Age            177
+SibSp            0
+Parch            0
+Ticket           0
+Fare             0
+Cabin          687
+Embarked         2
+dtype: int64
 </pre>
 </div>
 </div>
@@ -12266,7 +12266,7 @@ Categories (7, object): [A &lt; B &lt; C &lt; D &lt; E &lt; F &lt; G]</pre>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x117099350&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x10fe53410&gt;</pre>
 </div>
 
 </div>
@@ -12746,7 +12746,7 @@ p-value: 0.000
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x11a6edf90&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x1134a6f10&gt;</pre>
 </div>
 
 </div>
@@ -12965,7 +12965,7 @@ H3PcMDCkcmIYAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x1171afa10&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x10fce3450&gt;</pre>
 </div>
 
 </div>
@@ -13249,7 +13249,7 @@ GGOMSbKkYIwxJsmSgjHGmCRLCsYYY5IsKRhjjEn6f/mR1QRtnvEHAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x11ac3f650&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x1139e62d0&gt;</pre>
 </div>
 
 </div>
@@ -13558,7 +13558,7 @@ GaUEICKSUUoAIiIZ9b9YFRVCc1W0jwAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x11b1371d0&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x113eeb110&gt;</pre>
 </div>
 
 </div>
@@ -13892,7 +13892,7 @@ giSpYVKQJDVMCpKkhklBktQwKUiSGt8VD6/k3oe+sAAAAABJRU5ErkJggg==
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x11b36d190&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x114123190&gt;</pre>
 </div>
 
 </div>
@@ -14136,7 +14136,7 @@ IimlACAiklIKACIiKaUAICKSUgoAIiIp9f8BWHaMmA3zi7wAAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x11b4ceed0&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x113582ad0&gt;</pre>
 </div>
 
 </div>
@@ -14345,7 +14345,7 @@ KBmIiAhKBiIigpKBiIigZCAiIsD/A3K6oBg4O+U1AAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x11b718490&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x1144d1490&gt;</pre>
 </div>
 
 </div>
@@ -14565,7 +14565,7 @@ cKUAAAAASUVORK5CYII=
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x11b992d10&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x114749d10&gt;</pre>
 </div>
 
 </div>
@@ -14999,7 +14999,7 @@ hBiRBAshhBAjkmAhhBBiRBIshBBCjOg/ASM0xoIMXKQVAAAAAElFTkSuQmCC
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x11b9df850&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x114796850&gt;</pre>
 </div>
 
 </div>
